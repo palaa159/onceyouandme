@@ -8,38 +8,55 @@ module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no' },
-      { hid: 'description', name: 'description', content: pkg.description }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Kanit:400,500,600&amp;subset=thai' }
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Kanit:400,500,600&amp;subset=thai'
+      }
     ]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#3B8070' },
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: '#3B8070'
+  },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    { src: 'assets/styles/main.scss', lang: 'scss' } 
-  ],
+   ** Global CSS
+   */
+  css: [{
+    src: 'assets/styles/main.scss',
+    lang: 'scss'
+  }],
   router: {
     middleware: ['router']
   },
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     '~/plugins/ssr.js',
     '~/plugins/axios.js',
@@ -48,25 +65,34 @@ module.exports = {
     resourceHints: false
   },
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
+    '@nuxtjs/toast',
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // ['@nuxtjs/google-analytics', {
     //   id: ''
     // }],
   ],
-
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+  toast: {
+    position: 'top-right',
   },
   /*
-  ** Build configuration
-  */
+   ** Axios module configuration
+   */
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    credentials: true,
+    debug: false,
+    https: true,
+    port: 443,
+    host: pkg.apiUrl,
+    // prefix: '/wp-json/api/v1', moved to apiUrl.js
+  },
+  /*
+   ** Build configuration
+   */
   build: {
     // cache: true,
     // parallel: true,
@@ -77,24 +103,26 @@ module.exports = {
       })
     ],
     babel: {
-      presets: [[
-        "env", {
-          "targets": {
-            "chrome": 52,
-            "browsers": ["safari 7", "ie 11"]
+      presets: [
+        [
+          "env", {
+            "targets": {
+              "chrome": 52,
+              "browsers": ["safari 7", "ie 11"]
+            }
           }
-        }
-      ], 'stage-0', 'stage-1', 'stage-2', 'stage-3'],
+        ], 'stage-0', 'stage-1', 'stage-2', 'stage-3'
+      ],
       plugins: [
         "transform-runtime",
       ]
     },
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
       // Run ESLint on save
-      if (ctx.dev && ctx.client) {
+      if (ctx.isDev && ctx.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -102,7 +130,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      if (!ctx.dev) {
+      if (!ctx.isDev) {
         // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
         // for more information about purgecss.
         config.plugins.push(
