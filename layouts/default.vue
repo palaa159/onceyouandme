@@ -2,7 +2,7 @@
   <div>
     <Header/>
     <!-- Content -->
-    <main>
+    <main class="min-height-100vh _dp-f _alit-ct _ovfx-hd">
       <nuxt/>
     </main>
     <Footer/>
@@ -19,17 +19,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
-  @import 'assets/styles/variables';
-  .min-height-100vh {
-    min-height: calc(100vh - 100px);
-    background: rgba(0, 0, 0, 0.02);
-  }
-  .curtain {
-    @include breakpoint(mobile) {
-      background: #fff;
-    }
-    background: rgba(0, 0, 0, 0.75);
-  }
-</style>

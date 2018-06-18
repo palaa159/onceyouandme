@@ -1,4 +1,14 @@
-h1, h2, h3, h4, h5, h6, button {
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
   font-family: Kanit;
   font-weight: 400;
 }
@@ -7,9 +17,38 @@ h1, h2, h3, h4, h5, h6, button {
   user-select: none !important;
 }
 
-.page-enter-active, .page-leave-active {
+.page-enter-active,
+.page-leave-active {
   transition: opacity .25s;
 }
-.page-enter, .page-leave-to {
+
+.page-enter,
+.page-leave-to {
   opacity: 0;
+}
+
+.bio-button {
+  outline: none !important;
+}
+
+.min-height-100vh {
+  min-height: calc(100vh - 60px); // background: rgba(0, 0, 0, 0.02);
+}
+
+._fdrt-rrv {
+  flex-direction: row-reverse !important;
+}
+
+[lazy] {
+  transition: 0.25s;
+  transition-property: background-image !important;
+}
+
+[lazy=loading] {
+  background-position: center center !important;
+}
+
+[lazy=loaded] {
+  opacity: 1;
+  background-size: cover;
 }
