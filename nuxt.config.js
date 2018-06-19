@@ -12,12 +12,14 @@ module.exports = {
    */
   head: {
     title: pkg.name,
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
+        content:
+          'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
       },
       {
         hid: 'description',
@@ -25,14 +27,16 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Kanit:400,500,600&amp;subset=thai'
+        href:
+          'https://fonts.googleapis.com/css?family=Kanit:400,500,600&amp;subset=thai'
       }
     ]
   },
@@ -47,20 +51,19 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [{
-    src: 'assets/styles/main.scss',
-    lang: 'scss'
-  }],
+  css: [
+    {
+      src: 'assets/styles/main.scss',
+      lang: 'scss'
+    }
+  ],
   router: {
     middleware: ['router']
   },
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/ssr.js',
-    '~/plugins/axios.js',
-  ],
+  plugins: ['~/plugins/ssr.js', '~/plugins/axios.js'],
   render: {
     resourceHints: false
   },
@@ -70,13 +73,16 @@ module.exports = {
   modules: [
     '@nuxtjs/toast',
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
     // ['@nuxtjs/google-analytics', {
-    //   id: ''
+    //   id: '',
+    // autoTracking: {
+    //   pageviewOnLoad: false
+    // }
     // }],
   ],
   toast: {
-    position: 'top-right',
+    position: 'top-right'
   },
   /*
    ** Axios module configuration
@@ -87,7 +93,7 @@ module.exports = {
     debug: false,
     https: true,
     port: 443,
-    host: pkg.apiUrl,
+    host: pkg.apiUrl
     // prefix: '/wp-json/api/v1', moved to apiUrl.js
   },
   /*
@@ -99,23 +105,26 @@ module.exports = {
     // analyze: true,
     plugins: [
       new MomentLocalesPlugin({
-        localesToKeep: ['en', 'th'],
+        localesToKeep: ['en', 'th']
       })
     ],
     babel: {
       presets: [
         [
-          "env", {
-            "targets": {
-              "chrome": 52,
-              "browsers": ["safari 7", "ie 11"]
+          'env',
+          {
+            targets: {
+              chrome: 52,
+              browsers: ['safari 7', 'ie 11']
             }
           }
-        ], 'stage-0', 'stage-1', 'stage-2', 'stage-3'
+        ],
+        'stage-0',
+        'stage-1',
+        'stage-2',
+        'stage-3'
       ],
-      plugins: [
-        "transform-runtime",
-      ]
+      plugins: ['transform-runtime']
     },
     /*
      ** You can extend webpack config here
