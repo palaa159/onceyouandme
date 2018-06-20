@@ -8,7 +8,7 @@
   "gaId": "UA-119670360-4",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "cross-env HOST=0.0.0.0 NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build --analyze",
     "build-firebase": "rm -rf nuxt && rm -rf functions/nuxt && nuxt build && cp -R nuxt functions/ && cp -R static/* nuxt/dist/ && yarn deploy",
     "start": "cross-env NODE_ENV=production node server/index.js",
