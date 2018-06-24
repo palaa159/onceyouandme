@@ -1,11 +1,8 @@
-$sm: 770px;
-$md: 900px;
-$lg: 1200px;
+@import 'assets/styles/variables';
 @import 'assets/styles/biomatic.full.min.css';
 @import 'assets/styles/_grid.scss';
 @import 'assets/styles/_embed.scss';
 @import 'assets/styles/agile.scss';
-@import 'assets/styles/variables';
 @import 'assets/styles/default';
 /* Begin your default styles here */
 
