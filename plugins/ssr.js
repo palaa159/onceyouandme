@@ -36,5 +36,10 @@ Vue.use(require('vue-moment'), {
 })
 Vue.use(VModal)
 Vue.use(Transitions)
+
+fontawesome.config = {
+  autoAddCss: false
+}
+
 fontawesome.library.add(faSpinner, faSearch, faShoppingCart, faShoppingBag, faFrown, faTimes, faMinus, faPlus)
 Vue.component('fa-icon', FontAwesomeIcon)

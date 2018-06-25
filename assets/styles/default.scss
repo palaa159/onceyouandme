@@ -52,3 +52,7 @@ button {
   opacity: 1;
   background-size: cover;
 }
+
+.min-height-100vh {
+  min-height: calc(100vh - 100px); // background: rgba(0, 0, 0, 0.02);
+}
