@@ -12,14 +12,12 @@ module.exports = {
    */
   head: {
     title: pkg.name,
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
         name: 'viewport',
-        content:
-          'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
+        content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
       },
       {
         hid: 'description',
@@ -27,13 +25,10 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+    script: [{
+      src: '/js/offline.min.js',
+      body: true
+    }],
   },
 
   /*
@@ -46,12 +41,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    {
-      src: 'assets/styles/main.scss',
-      lang: 'scss'
-    }
-  ],
+  css: [{
+    src: 'assets/styles/main.scss',
+    lang: 'scss'
+  }],
   router: {
     middleware: ['router']
   },
@@ -59,8 +52,8 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/ssr.js', 
-    '~/plugins/axios.js', 
+    '~/plugins/ssr.js',
+    '~/plugins/axios.js',
     {
       src: '~/plugins/no-ssr.js',
       ssr: false
@@ -73,6 +66,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/offline',
     '@nuxtjs/toast',
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
