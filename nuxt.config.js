@@ -73,7 +73,8 @@ module.exports = {
     // ['@nuxtjs/google-analytics', {
     //   id: '',
     // autoTracking: {
-    //   pageviewOnLoad: false
+    //   pageviewOnLoad: false,
+    //   exception: true
     // }
     // }],
   ],
