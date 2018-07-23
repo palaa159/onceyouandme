@@ -1,12 +1,20 @@
 {
+  "live": false,
   "name": "5lab",
   "version": "1.0.0",
   "description": "5Lab project",
   "author": "Apon Palanuwech",
-  "fbAppId": "655426948132305",
+  "fbAppId": "XXXXXXXXXXXX",
   "apiUrl": "cms.5lab.co",
-  "gaId": "UA-119670360-4",
+  "gaId": "UA-XXXXXXXX-X",
   "private": true,
+  "browserslist": [
+    "IE 11",
+    "Safari 8",
+    "Firefox 52",
+    "ios_saf 10",
+    "android 4.4"
+  ],
   "scripts": {
     "dev": "cross-env HOST=0.0.0.0 NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build --analyze",

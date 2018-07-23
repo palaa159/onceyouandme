@@ -20,6 +20,11 @@ module.exports = {
         content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'
       },
       {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
         hid: 'description',
         name: 'description',
         content: pkg.description
