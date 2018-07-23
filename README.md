@@ -1,10 +1,19 @@
 # test
 
-> My primo Nuxt.js project
+> My Nuxt Project
+
+## Launch Checklist
+
+1.Og tags and sharing test
+2.Legacy browser test
+3.Favicon
+4.Enable production mode for all plugins
+5.Google Analytics / GTM
+6.Move important metadata to package.json
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
