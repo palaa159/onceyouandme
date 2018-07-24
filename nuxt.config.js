@@ -101,6 +101,7 @@ module.exports = {
   /*
    ** Build configuration
    */
+  buildDir: 'nuxt',
   build: {
     // cache: true,
     // parallel: true,
