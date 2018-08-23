@@ -71,7 +71,6 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/offline',
     '@nuxtjs/toast',
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
@@ -103,9 +102,7 @@ module.exports = {
    */
   buildDir: 'nuxt',
   build: {
-    // cache: true,
-    // parallel: true,
-    // analyze: true,
+    publicPath: '/',
     plugins: [
       new MomentLocalesPlugin({
         localesToKeep: ['en', 'th']
