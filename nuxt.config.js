@@ -31,6 +31,9 @@ module.exports = {
       }
     ],
     script: [{
+      src: '/js/shake.js',
+      body: true
+    }, {
       src: '/js/offline.min.js',
       body: true
     }],

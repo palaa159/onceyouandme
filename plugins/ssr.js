@@ -7,6 +7,8 @@ import Transitions from 'vue2-transitions'
 import moment from 'moment'
 require('moment/locale/th')
 
+import * as FBSE from '~/services/firebase'
+
 Vue.use(VueScrollTo)
 Vue.use(VeeValidate)
 // VueLazyLoad
@@ -21,3 +23,5 @@ Vue.use(require('vue-moment'), {
 })
 Vue.use(VModal)
 Vue.use(Transitions)
+
+FBSE.initFirebase()

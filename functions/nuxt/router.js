@@ -1,13 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const _78d2c312 = () => import('../pages/terms.vue' /* webpackChunkName: "pages/terms" */).then(m => m.default || m)
-const _0f918413 = () => import('../pages/preview.vue' /* webpackChunkName: "pages/preview" */).then(m => m.default || m)
-const _2a603ae7 = () => import('../pages/embed/index.vue' /* webpackChunkName: "pages/embed/index" */).then(m => m.default || m)
-const _2871ae37 = () => import('../pages/ping.vue' /* webpackChunkName: "pages/ping" */).then(m => m.default || m)
-const _93b8385a = () => import('../pages/privacy.vue' /* webpackChunkName: "pages/privacy" */).then(m => m.default || m)
-const _9a8469e2 = () => import('../pages/embed/_id.vue' /* webpackChunkName: "pages/embed/_id" */).then(m => m.default || m)
-const _6255f646 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _1dc72a66 = () => import('../pages/result.vue' /* webpackChunkName: "pages/result" */).then(m => m.default || m)
+const _2afa63e6 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _008e3be7 = () => import('../pages/play/index.vue' /* webpackChunkName: "pages/play/index" */).then(m => m.default || m)
+const _0250cac2 = () => import('../pages/play/_slug.vue' /* webpackChunkName: "pages/play/_slug" */).then(m => m.default || m)
+const _0a3aa8d2 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
 
@@ -69,38 +67,28 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/terms",
-			component: _78d2c312,
-			name: "terms"
+			path: "/result",
+			component: _1dc72a66,
+			name: "result"
 		},
 		{
-			path: "/preview",
-			component: _0f918413,
-			name: "preview"
+			path: "/about",
+			component: _2afa63e6,
+			name: "about"
 		},
 		{
-			path: "/embed",
-			component: _2a603ae7,
-			name: "embed"
+			path: "/play",
+			component: _008e3be7,
+			name: "play"
 		},
 		{
-			path: "/ping",
-			component: _2871ae37,
-			name: "ping"
-		},
-		{
-			path: "/privacy",
-			component: _93b8385a,
-			name: "privacy"
-		},
-		{
-			path: "/embed/:id",
-			component: _9a8469e2,
-			name: "embed-id"
+			path: "/play/:slug",
+			component: _0250cac2,
+			name: "play-slug"
 		},
 		{
 			path: "/",
-			component: _6255f646,
+			component: _0a3aa8d2,
 			name: "index"
 		}
     ],

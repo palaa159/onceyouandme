@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+const _1dc72a66 = () => import('../pages/result.vue' /* webpackChunkName: "pages/result" */).then(m => m.default || m)
 const _2afa63e6 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _008e3be7 = () => import('../pages/play/index.vue' /* webpackChunkName: "pages/play/index" */).then(m => m.default || m)
+const _0250cac2 = () => import('../pages/play/_slug.vue' /* webpackChunkName: "pages/play/_slug" */).then(m => m.default || m)
 const _0a3aa8d2 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
@@ -64,9 +67,24 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
+			path: "/result",
+			component: _1dc72a66,
+			name: "result"
+		},
+		{
 			path: "/about",
 			component: _2afa63e6,
 			name: "about"
+		},
+		{
+			path: "/play",
+			component: _008e3be7,
+			name: "play"
+		},
+		{
+			path: "/play/:slug",
+			component: _0250cac2,
+			name: "play-slug"
 		},
 		{
 			path: "/",

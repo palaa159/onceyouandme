@@ -11,7 +11,7 @@ const layouts = { "_default": _6f6c098b }
 
 
 export default {
-  head: {"title":"5lab","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"},{"hid":"og:type","property":"og:type","content":"website"},{"hid":"description","name":"description","content":"5Lab project"}],"script":[{"src":"\u002Fjs\u002Foffline.min.js","body":true}],"link":[],"style":[]},
+  head: {"title":"test-project","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"},{"hid":"og:type","property":"og:type","content":"website"},{"hid":"description","name":"description","content":"test project description"}],"script":[{"src":"\u002Fjs\u002Fshake.js","body":true},{"src":"\u002Fjs\u002Foffline.min.js","body":true}],"link":[],"style":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

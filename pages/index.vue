@@ -3,14 +3,18 @@
     <!-- Hero -->
     <div class="container">
       <div class="row _alit-ct">
-        <div class="col-6">
-          <h1 class="_ttf-upc _lh-100pct">
-            Become a Pro<br />
-            Plant Photographer
-          </h1>
-        </div>
-        <div class="col-6">
-          <img class="_h-512px" src="~/assets/images/human-photographing-plants.svg" />
+        <div class="col-12 col-md-6">
+          <h2 class="_lh-125pct">
+            Fai & Mai <br>
+            Game Shake Shake!
+          </h2>
+          <nuxt-link 
+            class="bio-button -positive _mgt-48px" 
+            to="/play">          
+            <h1 class="_ttf-upc _lh-100pct">
+              Play now
+            </h1>
+          </nuxt-link>
         </div>
       </div>
     </div>
