@@ -12,8 +12,8 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
-import nuxt_plugin_axios_42fb7700 from 'nuxt_plugin_axios_42fb7700' // Source: ./axios.js
-import nuxt_plugin_toast_0f2bc3af from 'nuxt_plugin_toast_0f2bc3af' // Source: ./toast.js (ssr: false)
+import nuxt_plugin_axios_2c5fabc2 from 'nuxt_plugin_axios_2c5fabc2' // Source: ./axios.js
+import nuxt_plugin_toast_0ee00f1e from 'nuxt_plugin_toast_0ee00f1e' // Source: ./toast.js (ssr: false)
 import nuxt_plugin_ssr_3a86d4ca from 'nuxt_plugin_ssr_3a86d4ca' // Source: ../plugins/ssr.js
 import nuxt_plugin_axios_5659d192 from 'nuxt_plugin_axios_5659d192' // Source: ../plugins/axios.js
 import nuxt_plugin_nossr_471a657b from 'nuxt_plugin_nossr_471a657b' // Source: ../plugins/no-ssr.js (ssr: false)
@@ -138,12 +138,12 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_axios_42fb7700 === 'function') await nuxt_plugin_axios_42fb7700(app.context, inject)
+  if (typeof nuxt_plugin_axios_2c5fabc2 === 'function') await nuxt_plugin_axios_2c5fabc2(app.context, inject)
   if (typeof nuxt_plugin_ssr_3a86d4ca === 'function') await nuxt_plugin_ssr_3a86d4ca(app.context, inject)
   if (typeof nuxt_plugin_axios_5659d192 === 'function') await nuxt_plugin_axios_5659d192(app.context, inject)
   
   if (process.browser) { 
-    if (typeof nuxt_plugin_toast_0f2bc3af === 'function') await nuxt_plugin_toast_0f2bc3af(app.context, inject)
+    if (typeof nuxt_plugin_toast_0ee00f1e === 'function') await nuxt_plugin_toast_0ee00f1e(app.context, inject)
     if (typeof nuxt_plugin_nossr_471a657b === 'function') await nuxt_plugin_nossr_471a657b(app.context, inject)
   }
 

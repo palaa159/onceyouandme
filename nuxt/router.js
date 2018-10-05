@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const _1dc72a66 = () => import('../pages/result.vue' /* webpackChunkName: "pages/result" */).then(m => m.default || m)
-const _2afa63e6 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
-const _008e3be7 = () => import('../pages/play/index.vue' /* webpackChunkName: "pages/play/index" */).then(m => m.default || m)
-const _0250cac2 = () => import('../pages/play/_slug.vue' /* webpackChunkName: "pages/play/_slug" */).then(m => m.default || m)
-const _0a3aa8d2 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _1598326a = () => import('../pages/result.vue' /* webpackChunkName: "pages/result" */).then(m => m.default || m)
+const _0bacda4f = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _1728ee36 = () => import('../pages/play/index.vue' /* webpackChunkName: "pages/play/index" */).then(m => m.default || m)
+const _1a9630c6 = () => import('../pages/play/_slug.vue' /* webpackChunkName: "pages/play/_slug" */).then(m => m.default || m)
+const _2b64b514 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
 
@@ -68,27 +68,27 @@ export function createRouter () {
     routes: [
 		{
 			path: "/result",
-			component: _1dc72a66,
+			component: _1598326a,
 			name: "result"
 		},
 		{
 			path: "/about",
-			component: _2afa63e6,
+			component: _0bacda4f,
 			name: "about"
 		},
 		{
 			path: "/play",
-			component: _008e3be7,
+			component: _1728ee36,
 			name: "play"
 		},
 		{
 			path: "/play/:slug",
-			component: _0250cac2,
+			component: _1a9630c6,
 			name: "play-slug"
 		},
 		{
 			path: "/",
-			component: _0a3aa8d2,
+			component: _2b64b514,
 			name: "index"
 		}
     ],

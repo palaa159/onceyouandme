@@ -25,17 +25,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12 _tal-ct">
-        <h5>
+      <div class="col-12">
+        <h5 class=" _tal-ct">
           Bride shakes: {{ b }}
           <br >
           Groom shakes: {{ g }}
         </h5>
-        <img 
-          src="/images/qr.png" 
-          class="_mgt-24px"
-          alt="">
-        <p>Join us at <br><strong>https://onceyouand.me</strong></p>
+        <div class="_dp-f _alit-ct _jtfct-ct">
+          <img 
+            src="/images/qr.png" 
+            class="_mgt-24px _h-256px _mgr-24px"
+            alt="">
+          <h2 class="_lh-100pct">Join us at <br><strong>www.onceyouand.me</strong></h2>
+        </div>
       </div>
     </div>
   </div>
@@ -76,6 +78,7 @@ export default {
     this.fbDb.ref('groom').child('count').on('value', (s) => {
       this.g = s.val()
     })
+    this.reset()
   },
   methods: {
     async reset () {
@@ -105,8 +108,6 @@ export default {
           if (Number.isInteger(this.countdownText)) {
             this.countdownText -= 1
           }
-
-
         }, 1000)
       }
       
