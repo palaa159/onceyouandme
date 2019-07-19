@@ -5,7 +5,7 @@
         <h1 class="_tal-ct cdt">{{ countdownText }}</h1>
       </div>
       <div class="col-12 _dp-f _jtfct-spbtw">
-        <div @click="reset">
+        <div @click="reload">
           <h3>#teambride 👰🏻</h3>
         </div>
         <div>
@@ -81,6 +81,9 @@ export default {
     this.reset()
   },
   methods: {
+    async reload () {
+      return window.location.reload()
+    },
     async reset () {
       // Click R to reset score
       this.fbDbBride = await firebase.database().ref('bride')
