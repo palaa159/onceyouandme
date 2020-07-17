@@ -36,7 +36,7 @@
     "express": "^4.15.3",
     "firebase": "^5.4.2",
     "js-cookie": "^2.2.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "nuxt-edge": "2.0.0-25476008.ba5c979",
     "vee-validate": "^2.0.6",
     "vue-awesome-swiper": "^3.1.3",
